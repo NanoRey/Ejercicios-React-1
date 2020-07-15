@@ -9,7 +9,7 @@ const Padre = () => {
     return (
         <div className="alert alert-primary">
             <h4>Padre</h4>
-            <Hijo />
+            <Hijo myFunction={printCustomText} />
         </div>
     );
 };
