@@ -3,7 +3,7 @@ import Contador from './Contador';
 
 const Ejercicio6c = () => {
     return (
-        <Contador />
+        <Contador/>
     );
 };
 

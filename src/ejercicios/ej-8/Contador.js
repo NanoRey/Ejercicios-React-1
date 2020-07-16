@@ -18,8 +18,9 @@ const Contador = () => {
         <div className="alert alert-primary">
             <p>Has dado {counter} clicks</p>
             <button onClick={() => setCounter(counter + 1)}>suma 1</button>
-            <Par />
-            <Impar />
+            {soyPar(counter)===true && <Par />}
+            {soyPar(counter)===false && <Impar />}    
+            {soyPar(counter) ? <Par /> : <Impar />}      
         </div>
     );
 };

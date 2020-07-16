@@ -1,14 +1,18 @@
 import React from 'react';
 import Hijo from "./Hijo";
 
-const Padre = () => {
-    const text = "Hola Mundo";
-    return (
+class Padre extends React.Component{
+    
+    render(){
+     const text = "Hola Mundo";  
+     return (
         <div className="alert alert-primary">
             <h4>Padre</h4>
-            <Hijo />
+            <Hijo text={text} />
         </div>
-    );
-};
+    ); 
+    }
+        
+}
 
 export default Padre;

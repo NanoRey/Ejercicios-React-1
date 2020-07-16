@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 
 /*
 
@@ -8,15 +9,18 @@ https://es.reactjs.org/docs/handling-events.html
 
 */
 
-const Hijo = (props) => {
-    const lukesMessage = "NOOOOOO!";
+class Hijo extends React.Component {
     
-    return (
-        <div className="alert alert-success">
-            <h4>Hijo</h4>
-            <button className="btn btn-info">¡Dar click aquí!</button>
-        </div>
-    );
+    render(){
+        const lukesMessage = "NOOOOOO!";
+        return (
+            <div className="alert alert-success">
+                <h4>Hijo</h4>
+                <button onClick={()=>this.props.function(lukesMessage)} className="btn btn-info">¡Dar click aquí!</button>
+            </div>
+        ); 
+    };
+    
 };
 
 export default Hijo;

@@ -1,17 +1,27 @@
 import React from 'react';
 
-const Contador = () => {
+class Contador extends React.Component {
     
-    const sumaClick = () => {
-        // Ingresa aquí tu código para aumentar el contador
+    constructor(props){
+        super(props);
+        this.state={
+            control:0,
+        };
+    };
+
+    sumaClick = () => {
+        this.setState({...this.state,control:this.state.control+1})
     }
 
-    return (
+    render (){
+     return (
         <div className="alert alert-primary">
-            <p><b>Has dado {/* Ingresa aquí el número de clicks */} clicks</b></p>
-            <button className="btn btn-info" onClick={sumaClick}>suma 1</button>
+            <p><b>Has dado {this.state.control} clicks</b></p>
+            <button className="btn btn-info" onClick={this.sumaClick}>suma 1</button>
         </div>
-    );
+    );   
+    }
+    
 };
 
 export default Contador;

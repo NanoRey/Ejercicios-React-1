@@ -3,7 +3,7 @@ import Padre from "./Padre";
 
 const Ejercicio1c = () => {
     return (
-        <Padre />
+        <Padre/>
     );
 }
 export default Ejercicio1c;
