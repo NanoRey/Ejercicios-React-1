@@ -126,13 +126,30 @@ const exData = [
     },
     {
         title: "Ejercicio 14 - Inversión de control",
-        description: "Refactorizar el siguiente código para seguir el principio de inversión de control",
+        description: "Refactorizar el siguiente código para seguir el principio de inversión de control. Para ello Avatar se podría declarar como una constante y enviarla por props en App o en Page.",
         url: "ej-14"
     },
     {
         title: "Ejercicio 15 - Implementación de UseEffect",
         description: "Debes implementar múltiples useEffect de acuerdo a las especificaciones que verás en los comentarios del código, no está permitido modificar el código fuera del bloque indicado. ",
         url: "ej-15"
+    },
+    {
+        title: "Ejercicio 16 - Inversión de control II",
+        description: "Refactorizar el siguiente código para seguir el principio de inversión de control y no propagar las props sobre todos los componentes. Para ello ContactData se podría declarar como una constante y enviarla por props en MainPage.",
+        url: "ej-16"
+    },
+    {
+        
+        title: "Ejercicio 17 - Context API",
+        description: "Implementa una aplicación con la estructura que se muestra en el diagrama. La aplicación debe cumplir los siguientes requisitos:",
+        descriptionList: ["Utiliza esta url para obtener la información de los posts: https://jsonplaceholder.typicode.com/posts",
+            "Debes utilizar Context API para compartir información entre los componentes",
+            "El post debe incluir la información del usuario que generó el post (PISTA: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/find)",
+            "Utiliza esta url para obtener los usuarios:  https://jsonplaceholder.typicode.com/users",
+            "Crea un context diferente para cada tipo de información, uno para Posts y uno para Users",
+        ],
+        url: "ej-17"
     }
 ];
 
