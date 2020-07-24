@@ -1,5 +1,6 @@
 import React from "react";
 import Page from './Page';
+import Avatar from "./Avatar"
 
 /*https://es.reactjs.org/docs/composition-vs-inheritance.html*/
 const Ejercicio14 = () => {
@@ -7,9 +8,12 @@ const Ejercicio14 = () => {
 
     const orders = {total: 12};
 
+    const avatarCode= <Avatar user={user.name} order={orders.total}/>
+    
+
     return (
         <div>
-            <Page userName={user.name} totalOrders={orders.total}/>
+            <Page avatar={avatarCode}/>
         </div>
     );
 }

@@ -1,16 +1,24 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
-class MyComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {ipAddress: '...'};
+const  MyComponent =()=> {
+
+    const [ipAdress,setIpAdress]=useState(0)
+
+    async function catchApi(){
+        const result1= await fetch("https://api.ipify.org/?format=json")
+        const ip1= await result1.json();
+        console.log(ip1)
+        setIpAdress(ip1.ip);
     }
 
-    render() {
-        return (
-            <h1>Mi ip es {this.state.ipAddress}</h1>
-        );
-    }
+    useEffect(()=>{
+        catchApi();
+    })
+
+    return (
+        <h1>Mi ip es {ipAdress}</h1>
+    );
+    
 }
 
 export default MyComponent;

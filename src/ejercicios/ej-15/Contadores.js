@@ -20,6 +20,10 @@ const Contadores = (props) => {
 
         // Implementa un useEffect que simule el método componentDidMount para incluir en history el valor inicial de cada contador 
         // ej. ["Valores iniciales -> Contador-1: 0; Contador-2: 0; Contador-3: 0"]
+        
+        useEffect(()=>{
+            setHistory([count1,count2,count3]);
+        }, [])
 
         // Implementa un useEffect para cada uno de los contadores que detecte los cambios de estado de forma individual
         // y almacene en history el cambio del contador
@@ -28,9 +32,22 @@ const Contadores = (props) => {
 
             // useEffect CONTADOR 1
 
+        useEffect(()=>{
+            setHistory([count1,count2,count3])
+
+        }, [count1])
+
             // useEffect CONTADOR 2
+        useEffect(()=>{
+            setHistory([count1,count2,count3])
+    
+        }, [count2])
 
             // useEffect CONTADOR 3
+        useEffect(()=>{
+            setHistory([count1,count2,count3])
+    
+        }, [count3])
 
 
         // Implementa un useEffect para detectar un cambio en cualquiera de los contadores que actualice lastChange con la fecha 
@@ -53,7 +70,7 @@ const Contadores = (props) => {
             <p>{lastChange.toLocaleTimeString()}</p>
             <h4>Histórico de cambios en contadores</h4>
             <ol>
-                {history.map(val => <li>{val}</li>)}
+            {history.map(val => <li>{val}</li>)}
             </ol>
         </div>
     );

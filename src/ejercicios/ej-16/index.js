@@ -3,6 +3,7 @@ import MainPage from './MainPage';
 
 /*https://es.reactjs.org/docs/composition-vs-inheritance.html*/
 //No es necesario modificar este fichero (index.js)
+
 const Ejercicio16 = () => {
     const contactData = {email: "contact@myecommerce.com", phone: "+34 654 321 321"};
 
